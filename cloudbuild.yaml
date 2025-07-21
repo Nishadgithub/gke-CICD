@@ -1,23 +1,23 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'gcr.io/cloud-builders/docker1'
   args: ['build', '-t', 'us-central1-docker.pkg.dev/cogent-octane-463812-q9/gke-repo/quickstart-image', './app1' ]
   id: 'Build Docker Image'
 
   # images:
   # - 'us-central1-docker.pkg.dev/<your_project_id>>/gke-repo/quickstart-image'
 
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'gcr.io/cloud-builders/docker1'
   args: ['push', 'us-central1-docker.pkg.dev/cogent-octane-463812-q9/gke-repo/quickstart-image' ]
   id: 'Push Docker Image'
 
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'gcr.io/cloud-builders/docker1'
   args: ['build', '-t', 'us-central1-docker.pkg.dev/cogent-octane-463812-q9/gke-repo/flask-image', './app2' ]
   id: 'Build Docker Image2'
 
   # images:
   # - 'us-central1-docker.pkg.dev/<your_project_id>/gke-repo/quickstart-image'
 
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'gcr.io/cloud-builders/docker1'
   args: ['push', 'us-central1-docker.pkg.dev/cogent-octane-463812-q9/gke-repo/flask-image' ]
   id: 'Push Docker Image2'
 
